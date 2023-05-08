@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.Navbar {
+    background-color: blueviolet;
+    color: white;
+    padding: .8rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.startnav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.startnav .leftnav span {
+    font-size: 1.4rem;
+}
+
+.startnav .rightNav a {
+    padding: .5rem;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.startnav .rightNav span {
+    display: none;
+    font-size: 1.7rem;
+}
+
+@media screen and (max-width:800px) {
+    .startnav .rightNav span {
+        display: block;
+    }
+
+    .startnav .rightNav a {
+        display: none;
+    }
+}
+
+/* ========== sidenav css ========= */
+
+.sidenav {
+    height: 100%;
+    background-color: blueviolet;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 0px;
+    transition: .5s;
+    overflow-x: hidden;
+    padding-top: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.sidenav a {
+    text-decoration: none;
+    font-size: 22px;
+    padding-left: 4rem;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.input {
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+
+.enterdText {
+    padding-top: 1rem;
+    padding-left: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.durgesh {
+    padding-top: 1rem;
+    padding-left: 1rem;
+}

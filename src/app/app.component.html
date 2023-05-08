@@ -1,0 +1,17 @@
+<div class="name">
+    <app-navbar></app-navbar>
+    <app-login></app-login>
+    <app-header></app-header>
+    <app-form></app-form>
+    <app-child [item]="data"></app-child>
+    <button (click)="updateVal()">Update Child Component</button>
+
+    <div *ngFor="let item of users">
+        <span>{{item.id}}</span> &nbsp;
+        <span>Name = {{item.name}}</span> &nbsp; &nbsp; &nbsp;
+        <span>address = {{item.address.street | uppercase}}</span>
+    </div>
+    <h2>{{date | date:'fullDate' }}</h2>
+
+    <h2>{{second | slice:2:5 | uppercase}}</h2>
+</div>

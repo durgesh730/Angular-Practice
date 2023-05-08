@@ -1,0 +1,46 @@
+<p>form works!</p>
+<form #basicForm="ngForm" (ngSubmit)="getAllData(basicForm.value)">
+    <input type="text" ngModel name="user" placeholder="Name" /> <br /><br />
+    <input type="text" ngModel name="email" placeholder="password" /> <br /> <br />
+    <input type="text" ngModel name="phone" placeholder="phone" /> <br /><br />
+    <button>Register</button>
+</form>
+
+<span>{{enterdata.user}}</span> <br />
+<span>{{enterdata.email}}</span> <br />
+<span>{{enterdata.phone}}</span> <br />
+
+<div>
+    <div *ngIf="display">heading tag
+        <span>durgesh</span> <br />
+        <span>durgesh</span> <br />
+        <span>durgesh</span> <br />
+        <span>durgesh</span> <br />
+    </div>
+    <button (click)="toggle()">Register</button>
+</div>
+
+<div class="row my-4 mx-4 ">
+	<div class="col">
+		<div ngbDropdown class="d-inline-block">
+			<button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+				Toggle dropdown
+			</button>
+			<div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+				<button ngbDropdownItem>Action - 1</button>
+				<button ngbDropdownItem>Another Action</button>
+				<button ngbDropdownItem>Something else is here</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div>
+    <input type="text" #userData name="user" placeholder="Name" /> <br />
+    <button (click)="addinputs(userData.value)" >Add</button>
+</div>
+
+<div *ngFor="let item of arr" >
+   <span>{{item.text}} <button (click)="remobve(item.id)" >Remove</button> </span>
+</div>

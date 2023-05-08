@@ -1,0 +1,73 @@
+<div class="Navbar">
+    <div class="container">
+        <div class="startnav">
+            <div class="leftnav">
+                <span>Practice</span>
+            </div>
+            <div class="rightNav">
+                <a href="">Home</a>
+                <a href="">about</a>
+                <a href="">Login</a>
+                <a href="">signup</a>
+                <span (click)="opensideNav()"><fa-icon [icon]="faBars"></fa-icon></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="mysidenav" [style.width]="width" class="sidenav">
+    <a href="">Home</a>
+    <a href="">about</a>
+    <a href="">Login</a>
+    <a href="">signup</a>
+</div>
+
+<!-- <span>{{data[0].id}}</span>
+<span>{{players}}</span> -->
+
+<div class="input">
+    <input type="text" #box (keyup)="getData(box.value)" placeholder="Type your Name" />
+</div>
+
+<div class="input">
+    <input type="text" #box1 (keydown)="getData(box1.value)" placeholder="Type your Name" />
+</div>
+
+
+<div class="enterdText ">
+    <h3>See What's You Write</h3>
+    <span>{{print}}</span>
+</div>
+
+<div>
+    <button (mouseover)="fun()">Mouse Hover</button>
+</div>
+
+<div class="durgesh">
+    <button (click)="IncreaseD('D')">--</button>
+
+    <span>{{val}}</span>
+    <button (click)="IncreaseD('I')">++</button>
+</div>
+
+<h1 *ngIf="show else elseBlock">
+    durgesh
+</h1>
+
+<ng-template #elseBlock >
+    <h1>Else Condition</h1>
+</ng-template>
+
+<button (click)="change()" >Click Change IfElse</button>
+ 
+<h3 *ngFor="let item of users" >{{item}}</h3>
+
+<h1>Color Binding</h1>
+
+<span [style.color]="color" [style.backgroundColor]="bgColor">
+    durgesh binding
+</span>
+
+<button (click)="updatecolor()" >Update Color</button>
+
+
